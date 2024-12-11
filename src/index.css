@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './styles/responsive.css';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply text-base;
+  }
+
+  body {
+    @apply text-gray-900 antialiased;
+  }
+
+  /* Responsive typography */
+  h1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl sm:text-2xl lg:text-3xl font-semibold;
+  }
+
+  p {
+    @apply text-base sm:text-lg leading-relaxed;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-gray-700 hover:text-[#3568a4] hover:bg-blue-50 px-4 py-3 rounded-md text-base font-medium transition-all duration-200;
+  }
+
+  .mobile-nav-link {
+    @apply block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-[#3568a4] hover:bg-blue-50 transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-[#3568a4] hover:bg-[#2d5a8d] transition-colors;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-[#3568a4] bg-white hover:bg-gray-50 transition-colors;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-4 sm:p-6 lg:p-8;
+  }
+
+  .input {
+    @apply w-full rounded-md border-gray-300 shadow-sm focus:border-[#3568a4] focus:ring-[#3568a4];
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsive containers */
+.container-fluid {
+  @apply w-full px-4 sm:px-6 lg:px-8;
+}
+
+.container-narrow {
+  @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Responsive images */
+.img-responsive {
+  @apply w-full h-auto object-cover;
+}
+
+/* Responsive spacing */
+.section {
+  @apply py-12 sm:py-16 lg:py-20;
+}
+
+.section-sm {
+  @apply py-8 sm:py-12 lg:py-16;
+}

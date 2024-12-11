@@ -1,0 +1,1 @@
+// File contents removed as it was only used for Google Calendar types
